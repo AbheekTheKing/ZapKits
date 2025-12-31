@@ -1,42 +1,9 @@
-import { Box, Sparkles, Users, Zap, Gift, Shield } from "lucide-react";
+import { Box, Sparkles, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
-import FeatureCard from "@/components/FeatureCard";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
-  const features = [
-    {
-      icon: Box,
-      title: "Random Loot Boxes",
-      description: "Open mystery boxes filled with rare items, powerful gear, and exclusive treasures you won't find anywhere else.",
-    },
-    {
-      icon: Sparkles,
-      title: "Unique Kits",
-      description: "Discover randomized kits that give you an exciting advantage. Every kit is a new surprise!",
-    },
-    {
-      icon: Users,
-      title: "Active Community",
-      description: "Join thousands of players in an engaging, friendly community with regular events and competitions.",
-    },
-    {
-      icon: Zap,
-      title: "No Lag Experience",
-      description: "Enjoy smooth gameplay on our high-performance servers optimized for the best Minecraft experience.",
-    },
-    {
-      icon: Gift,
-      title: "Daily Rewards",
-      description: "Log in daily to claim free rewards, bonus boxes, and exclusive items for loyal players.",
-    },
-    {
-      icon: Shield,
-      title: "Fair Play",
-      description: "Our advanced anti-cheat system ensures everyone has a fair and fun experience on the server.",
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
@@ -151,33 +118,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Why Choose <span className="text-primary text-glow">ZapKits</span>?
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Experience the ultimate random box Minecraft server with features designed for maximum fun.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={feature.title}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-                delay={100 * (index + 1)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
