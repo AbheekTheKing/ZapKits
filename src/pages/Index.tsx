@@ -1,4 +1,4 @@
-import { Box, Sparkles, Users, Zap, Gift, Shield } from "lucide-react";
+import { Wand2, Sparkles, Users, Zap, Gift, Shield, Box } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
@@ -7,9 +7,9 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Index = () => {
   const features = [
     {
-      icon: Box,
-      title: "Random Loot Boxes",
-      description: "Open mystery boxes filled with rare items, powerful gear, and exclusive treasures you won't find anywhere else.",
+      icon: Wand2,
+      title: "Custom Enchants",
+      description: "Discover powerful custom enchantments that go beyond vanilla. Unique effects to dominate your battles!",
     },
     {
       icon: Sparkles,
