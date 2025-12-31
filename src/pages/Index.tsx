@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
 import heroBg from "@/assets/hero-bg.jpg";
+import zapkitsLogo from "@/assets/zapkits-logo.png";
 
 const Index = () => {
   const features = [
@@ -76,14 +77,17 @@ const Index = () => {
               <span>MINECRAFT RANDOM BOX SERVER</span>
             </div>
 
-            {/* Main Title */}
-            <h1 
-              className="text-5xl md:text-7xl lg:text-8xl font-display font-black text-glow opacity-0 animate-fade-in"
+            {/* Main Logo */}
+            <div 
+              className="opacity-0 animate-fade-in"
               style={{ animationDelay: "100ms" }}
             >
-              <span className="text-foreground">ZAP</span>
-              <span className="text-primary">KITS</span>
-            </h1>
+              <img 
+                src={zapkitsLogo} 
+                alt="ZapKits" 
+                className="h-32 md:h-48 lg:h-56 mx-auto drop-shadow-[0_0_30px_hsl(200,85%,50%,0.5)]"
+              />
+            </div>
 
             {/* Tagline */}
             <p 
@@ -210,10 +214,7 @@ const Index = () => {
       <footer className="py-8 border-t border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="font-display text-xl">
-              <span className="text-foreground">ZAP</span>
-              <span className="text-primary">KITS</span>
-            </div>
+            <img src={zapkitsLogo} alt="ZapKits" className="h-8" />
             <p className="text-muted-foreground text-sm">
               © 2024 ZapKits. Not affiliated with Mojang AB.
             </p>
