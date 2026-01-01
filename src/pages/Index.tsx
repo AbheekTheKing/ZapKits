@@ -1,10 +1,12 @@
-import { Wand2, Sparkles, Users, Zap, Gift, Shield, Gamepad2 } from "lucide-react";
+import { Wand2, Sparkles, Users, Zap, Gift, Shield, Gamepad2, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
 import heroBg from "@/assets/hero-bg.jpg";
 import zapkitsLogo from "@/assets/zapkits-logo.png";
+import { toast } from "sonner";
 
+const SERVER_IP = "zapkits.minehut.gg";
 const Index = () => {
   const features = [
     {
@@ -103,7 +105,7 @@ const Index = () => {
               className="flex justify-center opacity-0 animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <ServerIP ip="zapkits.minehut.gg" />
+              <ServerIP ip={SERVER_IP} />
             </div>
 
             {/* CTA Buttons */}
@@ -111,8 +113,15 @@ const Index = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in"
               style={{ animationDelay: "400ms" }}
             >
-              <Button variant="hero" size="xl">
-                <Gamepad2 className="h-5 w-5" />
+              <Button 
+                variant="hero" 
+                size="xl"
+                onClick={() => {
+                  navigator.clipboard.writeText(SERVER_IP);
+                  toast.success("Server IP copied to clipboard!");
+                }}
+              >
+                <Copy className="h-5 w-5" />
                 Join Now
               </Button>
               <Button variant="outline" size="xl">
@@ -147,12 +156,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: "600ms" }}>
-          <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center p-1">
-            <div className="w-1.5 h-3 bg-primary rounded-full animate-bounce" />
-          </div>
-        </div>
       </section>
 
       {/* Features Section */}
