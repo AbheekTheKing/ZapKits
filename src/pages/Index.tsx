@@ -103,7 +103,7 @@ const Index = () => {
               className="flex justify-center opacity-0 animate-fade-in"
               style={{ animationDelay: "300ms" }}
             >
-              <ServerIP ip="play.zapkits.net" />
+              <ServerIP ip="zapkits.minehut.gg" />
             </div>
 
             {/* CTA Buttons */}
