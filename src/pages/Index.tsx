@@ -1,10 +1,11 @@
-import { Wand2, Sparkles, Users, Zap, Gift, Shield, Gamepad2, Copy } from "lucide-react";
+import { Wand2, Sparkles, Users, Zap, Gift, Shield, Copy, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
 import heroBg from "@/assets/hero-bg.jpg";
 import zapkitsLogo from "@/assets/zapkits-logo.png";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 const SERVER_IP = "zapkits.minehut.gg";
 const Index = () => {
@@ -124,7 +125,12 @@ const Index = () => {
                 <Copy className="h-5 w-5" />
                 Join Now
               </Button>
-              <Button variant="outline" size="xl">
+              <Button 
+                variant="outline" 
+                size="xl"
+                onClick={() => window.open("https://zapkitsmc.tebex.io/", "_blank")}
+              >
+                <ExternalLink className="h-5 w-5" />
                 View Store
               </Button>
             </div>
@@ -233,9 +239,9 @@ const Index = () => {
               © 2024 ZapKits. Not affiliated with Mojang AB.
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Store</a>
-              <a href="#" className="hover:text-primary transition-colors">Rules</a>
-              <a href="#" className="hover:text-primary transition-colors">Discord</a>
+              <a href="https://zapkitsmc.tebex.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Store</a>
+              <Link to="/rules" className="hover:text-primary transition-colors">Rules</Link>
+              <a href="https://discord.gg/pfZ6VT6Rjj" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Discord</a>
             </div>
           </div>
         </div>
