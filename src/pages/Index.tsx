@@ -1,4 +1,4 @@
-import { Wand2, Sparkles, Users, Zap, Gift, Shield, Box } from "lucide-react";
+import { Wand2, Sparkles, Users, Zap, Gift, Shield, Gamepad2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
@@ -30,7 +30,7 @@ const Index = () => {
     {
       icon: Gift,
       title: "Daily Rewards",
-      description: "Log in daily to claim free rewards, bonus boxes, and exclusive items for loyal players.",
+      description: "Log in daily to claim free rewards and exclusive items for loyal players.",
     },
     {
       icon: Shield,
@@ -74,7 +74,7 @@ const Index = () => {
             {/* Server Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-muted/30 border border-primary/30 rounded-full text-sm text-primary font-display tracking-wider opacity-0 animate-fade-in">
               <Sparkles className="h-4 w-4" />
-              <span>MINECRAFT RANDOM BOX SERVER</span>
+              <span>MINECRAFT KIT SERVER</span>
             </div>
 
             {/* Main Logo */}
@@ -94,8 +94,8 @@ const Index = () => {
               className="text-xl md:text-2xl text-muted-foreground font-body max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in"
               style={{ animationDelay: "200ms" }}
             >
-              Unlock the mystery. Open random loot boxes packed with epic rewards. 
-              Every box is a new adventure!
+              Experience the ultimate kit PvP server with custom enchants and epic rewards. 
+              Every battle is a new adventure!
             </p>
 
             {/* Server IP */}
@@ -112,7 +112,7 @@ const Index = () => {
               style={{ animationDelay: "400ms" }}
             >
               <Button variant="hero" size="xl">
-                <Box className="h-5 w-5" />
+                <Gamepad2 className="h-5 w-5" />
                 Join Now
               </Button>
               <Button variant="outline" size="xl">
@@ -133,9 +133,9 @@ const Index = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-display font-bold text-secondary text-glow-gold">
-                  100+
+                  50+
                 </div>
-                <div className="text-sm text-muted-foreground mt-1">Unique Boxes</div>
+                <div className="text-sm text-muted-foreground mt-1">Unique Kits</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-display font-bold text-accent">
@@ -165,7 +165,7 @@ const Index = () => {
               Why Choose <span className="text-primary text-glow">ZapKits</span>?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Experience the ultimate random box Minecraft server with features designed for maximum fun.
+              Experience the ultimate Minecraft kit server with features designed for maximum fun.
             </p>
           </div>
 
@@ -191,11 +191,11 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
-              Ready to <span className="text-secondary text-glow-gold">Unbox</span> Your Destiny?
+              Ready to <span className="text-secondary text-glow-gold">Dominate</span> the Arena?
             </h2>
             <p className="text-muted-foreground text-lg">
-              Join thousands of players already enjoying the thrill of random loot boxes. 
-              Your next legendary item awaits!
+              Join thousands of players already enjoying epic kit battles and custom enchants. 
+              Your next legendary victory awaits!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gold" size="xl">
