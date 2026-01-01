@@ -201,11 +201,22 @@ const Index = () => {
               Your next legendary victory awaits!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="gold" size="xl">
+              <Button 
+                variant="gold" 
+                size="xl"
+                onClick={() => {
+                  navigator.clipboard.writeText(SERVER_IP);
+                  toast.success("Server IP copied to clipboard!");
+                }}
+              >
                 <Gift className="h-5 w-5" />
-                Start Playing Free
+                Start Playing
               </Button>
-              <Button variant="outline" size="xl">
+              <Button 
+                variant="outline" 
+                size="xl"
+                onClick={() => window.open("https://discord.gg/pfZ6VT6Rjj", "_blank")}
+              >
                 Join Discord
               </Button>
             </div>
