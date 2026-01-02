@@ -6,6 +6,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    { name: "Store", path: "https://zapkitsmc.tebex.io/", external: true },
     { name: "Rules", path: "/rules" },
     { name: "Voting", path: "/voting" },
   ];
@@ -19,19 +20,31 @@ const Navigation = () => {
           </Link>
 
           <nav className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    location.pathname === link.path
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
           </nav>
         </div>
       </div>
