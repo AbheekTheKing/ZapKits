@@ -1,6 +1,6 @@
-import { Shield, MessageSquare, Gamepad2, Users, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Shield, MessageSquare, Gamepad2, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
 import zapkitsLogo from "@/assets/zapkits-logo.png";
 import { Link } from "react-router-dom";
 
@@ -48,20 +48,7 @@ const Rules = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border/50 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={zapkitsLogo} alt="ZapKits" className="h-8" />
-          </Link>
-          <Link to="/">
-            <Button variant="outline" size="sm">
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero */}
       <section className="py-16 relative">

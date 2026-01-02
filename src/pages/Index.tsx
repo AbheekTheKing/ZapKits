@@ -2,6 +2,7 @@ import { Wand2, Sparkles, Users, Zap, Gift, Shield, Copy, ExternalLink } from "l
 import { Button } from "@/components/ui/button";
 import ServerIP from "@/components/ServerIP";
 import FeatureCard from "@/components/FeatureCard";
+import Navigation from "@/components/Navigation";
 import heroBg from "@/assets/hero-bg.jpg";
 import zapkitsLogo from "@/assets/zapkits-logo.png";
 import { toast } from "sonner";
@@ -44,6 +45,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-hidden">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         {/* Background Image with Overlay */}
